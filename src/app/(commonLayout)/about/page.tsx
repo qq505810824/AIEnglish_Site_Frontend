@@ -1,23 +1,42 @@
-import { ShieldCheck, Sparkles, Users2 } from "lucide-react";
-import Image from "next/image";
+import { SEO } from '@/components/SEO';
+import { ShieldCheck, Sparkles, Users2 } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutPage() {
     return (
         <>
+            <SEO
+                title="About Us - AI English"
+                description="Learn more about AI English, our mission to revolutionize language learning with cutting-edge AI technology."
+                openGraph={{
+                    title: "About Us - AI English",
+                    description: "Learn more about AI English, our mission to revolutionize language learning with cutting-edge AI technology.",
+                    images: [
+                        {
+                            url: "https://wwww.docai.net/og-image.jpg",
+                            width: 1200,
+                            height: 630,
+                            alt: "About AI English",
+                        }
+                    ]
+                }}
+            />
             <main className="max-w-7xl mx-auto px-4 pt-16 pb-24">
                 <div className="grid md:grid-cols-2 gap-10 items-center">
                     <div>
                         <h1 className="text-4xl font-extrabold">About AI English</h1>
                         <p className="mt-5 text-gray-700 leading-relaxed">
-                            AI English was founded by a team of <strong>industry experts</strong> across education,
-                            assessment design, and applied AI. Our mission is simple: help learners achieve
-                            measurable progress with modern tools that feel effortless to use.
+                            AI English was founded by a team of <strong>industry experts</strong>{' '}
+                            across education, assessment design, and applied AI. Our mission is
+                            simple: help learners achieve measurable progress with modern tools that
+                            feel effortless to use.
                         </p>
                         <p className="mt-4 text-gray-700 leading-relaxed">
-                            The platform is designed to align naturally with <strong>IELTS</strong> and other
-                            public examinations. Instead of “test-prep tricks,” we focus on the deeper capabilities
-                            that high-stakes exams actually measure—coherence, accuracy, range, and task completion—
-                            while keeping teachers fully in control of pedagogy and standards.
+                            The platform is designed to align naturally with <strong>IELTS</strong>{' '}
+                            and other public examinations. Instead of “test-prep tricks,” we focus
+                            on the deeper capabilities that high-stakes exams actually
+                            measure—coherence, accuracy, range, and task completion— while keeping
+                            teachers fully in control of pedagogy and standards.
                         </p>
 
                         <div className="mt-8 grid sm:grid-cols-3 gap-4">
@@ -25,7 +44,8 @@ export default function AboutPage() {
                                 <Users2 className="h-6 w-6 text-blue-600" />
                                 <div className="mt-2 font-semibold">Expert-Built</div>
                                 <div className="text-gray-600 text-sm">
-                                    Co-created with senior educators, exam raters, and AI practitioners.
+                                    Co-created with senior educators, exam raters, and AI
+                                    practitioners.
                                 </div>
                             </div>
                             <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm">
@@ -60,19 +80,22 @@ export default function AboutPage() {
                     <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
                         <div className="font-semibold">Aligned with Real-World English</div>
                         <p className="mt-2 text-sm text-blue-900">
-                            Emphasizes communicative competence and academic literacy relevant to IELTS and public exams.
+                            Emphasizes communicative competence and academic literacy relevant to
+                            IELTS and public exams.
                         </p>
                     </div>
                     <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
                         <div className="font-semibold">Designed with Educators</div>
                         <p className="mt-2 text-sm text-blue-900">
-                            Efficient classroom workflows, transparent evaluation, and flexible oversight.
+                            Efficient classroom workflows, transparent evaluation, and flexible
+                            oversight.
                         </p>
                     </div>
                     <div className="bg-blue-50 border border-blue-100 rounded-2xl p-6">
                         <div className="font-semibold">Powered by Applied AI</div>
                         <p className="mt-2 text-sm text-blue-900">
-                            Feedback that is fast, consistent, and explainable—without dictating pedagogy.
+                            Feedback that is fast, consistent, and explainable—without dictating
+                            pedagogy.
                         </p>
                     </div>
                 </section>

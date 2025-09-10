@@ -2,6 +2,8 @@ import Topbar from '@/app/components/base/topbar';
 import BrowerInitor from '@/app/components/browser-initor';
 import I18NServer from '@/app/components/i18n-server';
 import SentryInitor from '@/app/components/sentry-initor';
+import { OrganizationJsonLd, SoftwareAppJsonLd, WebSiteJsonLd } from '@/components/JsonLd';
+import { seoConfig } from '@/config/seo.config';
 import { AlertProvider } from '@/context/AlertContext';
 import { AppContextProvider } from '@/context/app-context';
 import { EventEmitterContextProvider } from '@/context/event-emitter';
@@ -9,25 +11,19 @@ import { LoadProvider } from '@/context/LoadContext';
 import { ModalContextProvider } from '@/context/modal-context';
 import { getLocaleOnServer } from '@/i18n/server';
 import type { Viewport } from 'next';
+import { Metadata } from 'next';
 import Footer from './components/Footer';
 import HeaderSet from './components/Header/HeaderSet';
 import SwrInitor from './components/swr-initor';
 import './styles/globals.css';
 import './styles/markdown.scss';
 
-export const metadata = {
-    title: 'AI English — Learn Better with AI',
-    description:
-        'A next-generation platform for English writing, reading and speaking, powered by cutting-edge AI.'
+export const metadata: Metadata = {
+    ...seoConfig,
+    title: seoConfig.title.default,
 };
 
-export const viewport: Viewport = {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    viewportFit: 'cover',
-    userScalable: false
-};
+export const viewport: Viewport = seoConfig.viewport;
 
 const LocaleLayout = ({ children }: { children: React.ReactNode }) => {
     const locale = getLocaleOnServer();
@@ -39,6 +35,10 @@ const LocaleLayout = ({ children }: { children: React.ReactNode }) => {
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+                {/* 结构化数据 */}
+                <WebSiteJsonLd />
+                <OrganizationJsonLd />
+                <SoftwareAppJsonLd />
             </head>
             <body className="h-full select-auto">
                 <Topbar />
