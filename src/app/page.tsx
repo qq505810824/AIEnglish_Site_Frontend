@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import HomePage from './(commonLayout)/home/page';
 
 export const metadata: Metadata = {
-    title: 'Home',
+    title: seoConfig.title.default,
     description: seoConfig.description,
     openGraph: {
         ...seoConfig.openGraph,
