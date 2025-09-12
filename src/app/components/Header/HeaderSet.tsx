@@ -18,7 +18,7 @@ export default function HeaderSet() {
         <>
             <HeaderView
                 {...{
-                    title: 'AIMUN',
+                    title: 'AI English',
                     links,
                     section,
                     setSection
