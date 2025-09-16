@@ -9,14 +9,15 @@ export default function AboutPage() {
                 title="About Us - AI English"
                 description="Learn more about AI English, our mission to revolutionize language learning with cutting-edge AI technology."
                 openGraph={{
-                    title: "About Us - AI English",
-                    description: "Learn more about AI English, our mission to revolutionize language learning with cutting-edge AI technology.",
+                    title: 'About Us - AI English',
+                    description:
+                        'Learn more about AI English, our mission to revolutionize language learning with cutting-edge AI technology.',
                     images: [
                         {
-                            url: "https://wwww.docai.net/og-image.jpg",
+                            url: 'https://wwww.docai.net/og-image.jpg',
                             width: 1200,
                             height: 630,
-                            alt: "About AI English",
+                            alt: 'About AI English'
                         }
                     ]
                 }}

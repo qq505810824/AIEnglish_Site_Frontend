@@ -15,8 +15,8 @@ export function WebSiteJsonLd() {
         potentialAction: {
             '@type': 'SearchAction',
             target: `${siteConfig.url}/search?q={search_term_string}`,
-            "query-input": "required name=search_term_string",
-        } as any,
+            'query-input': 'required name=search_term_string'
+        } as any
     };
 
     return <JsonLd item={webSiteData} />;
@@ -29,7 +29,7 @@ export function OrganizationJsonLd() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: siteConfig.name,
-        url: siteConfig.url,
+        url: siteConfig.url
         // 移除了sameAs属性，因为没有社交媒体链接
     };
 
@@ -49,8 +49,8 @@ export function SoftwareAppJsonLd() {
         offers: {
             '@type': 'Offer',
             price: '0',
-            priceCurrency: 'USD',
-        },
+            priceCurrency: 'USD'
+        }
     };
 
     return <JsonLd item={softwareAppData} />;

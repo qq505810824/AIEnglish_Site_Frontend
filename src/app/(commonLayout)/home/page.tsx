@@ -44,14 +44,15 @@ export default function HomePage() {
                 title="AI English - Learn Better with AI"
                 description="A next-generation platform for English writing, reading and speaking, powered by cutting-edge AI. Unlock the future of language learning with AI English."
                 openGraph={{
-                    title: "AI English - Learn Better with AI",
-                    description: "A next-generation platform for English writing, reading and speaking, powered by cutting-edge AI. Unlock the future of language learning with AI English.",
+                    title: 'AI English - Learn Better with AI',
+                    description:
+                        'A next-generation platform for English writing, reading and speaking, powered by cutting-edge AI. Unlock the future of language learning with AI English.',
                     images: [
                         {
-                            url: "https://wwww..docai.net/og-image.jpg",
+                            url: 'https://wwww..docai.net/og-image.jpg',
                             width: 1200,
                             height: 630,
-                            alt: "AI English Platform",
+                            alt: 'AI English Platform'
                         }
                     ]
                 }}
@@ -66,7 +67,8 @@ export default function HomePage() {
                         </h1>
                         <p className="mt-5 text-lg text-gray-600 max-w-xl">
                             A next-generation platform that streamlines teaching and supercharges
-                            learning—combining AI grading, adaptive reading, and speech intelligence.
+                            learning—combining AI grading, adaptive reading, and speech
+                            intelligence.
                         </p>
                         <div className="mt-8 flex gap-3">
                             <a

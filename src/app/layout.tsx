@@ -20,7 +20,7 @@ import './styles/markdown.scss';
 
 export const metadata: Metadata = {
     ...seoConfig,
-    title: seoConfig.title.default,
+    title: seoConfig.title.default
 };
 
 export const viewport: Viewport = seoConfig.viewport;
@@ -31,6 +31,8 @@ const LocaleLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <html lang={locale ?? 'en'} className="h-full">
             <head>
+                <link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon.ico" />
+                <link rel="shortcut icon" href="./favicons/favicon.ico" />
                 <meta name="theme-color" content="#FFFFFF" />
                 <meta name="mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />

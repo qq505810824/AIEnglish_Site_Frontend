@@ -6,24 +6,24 @@ module.exports = {
         policies: [
             {
                 userAgent: '*',
-                allow: '/',
+                allow: '/'
             },
             {
                 userAgent: '*',
-                disallow: ['/api/', '/_next/', '/static/'],
-            },
+                disallow: ['/api/', '/_next/', '/static/']
+            }
         ],
         additionalSitemaps: [
-            'https://www.docai.net/sitemap.xml',
+            'https://www.docai.net/sitemap.xml'
             // 如果有其他sitemap可以在这里添加
-        ],
+        ]
     },
     exclude: [
         '/api/*',
         '/_next/*',
         '/static/*',
         '/404',
-        '/500',
+        '/500'
         // 添加其他需要排除的路径
     ],
     // 如果你的网站有动态路由，可以在这里配置
@@ -37,7 +37,7 @@ module.exports = {
                 loc: path,
                 changefreq: 'daily',
                 priority: 1.0,
-                lastmod: new Date().toISOString(),
+                lastmod: new Date().toISOString()
             };
         }
 
@@ -46,7 +46,7 @@ module.exports = {
             loc: path,
             changefreq: 'weekly',
             priority: 0.8,
-            lastmod: new Date().toISOString(),
+            lastmod: new Date().toISOString()
         };
-    },
+    }
 };

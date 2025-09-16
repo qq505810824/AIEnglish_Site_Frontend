@@ -7,18 +7,16 @@ export const metadata: Metadata = {
     description: seoConfig.description,
     openGraph: {
         ...seoConfig.openGraph,
-        title: 'Home - ' + seoConfig.title.default,
+        title: 'Home - ' + seoConfig.title.default
     },
     twitter: {
         ...seoConfig.twitter,
-        title: 'Home - ' + seoConfig.title.default,
-    },
+        title: 'Home - ' + seoConfig.title.default
+    }
 };
 
 const Home = async () => {
-    return (
-        <HomePage />
-    );
+    return <HomePage />;
 };
 
 export default Home;

@@ -1,7 +1,6 @@
 'use client';
 import { useAppContext } from '@/context/app-context';
 import { GlobalStyles, Sheet } from '@mui/joy';
-import { Globe2 } from 'lucide-react';
 import { useRouter } from 'next-nprogress-bar';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -32,7 +31,7 @@ export default function HeaderView(props: ViewProps) {
         router.push(section);
     };
 
-    const logout = async () => {};
+    const logout = async () => { };
 
     return (
         <>
@@ -99,7 +98,7 @@ export default function HeaderView(props: ViewProps) {
                                 </svg>
                             </button>
                             <Link href="/" className="flex items-center gap-2">
-                                <Globe2 className="h-6 w-6 text-blue-600" />
+                                <img alt='ico' src="./favicons/favicon.ico" className='w-6' />
                                 <span className="font-bold">{title}</span>
                             </Link>
                         </div>
